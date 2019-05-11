@@ -1,0 +1,19 @@
+current directory: /Users/sadahiro/rails_projects/sharetrip/vendor/bundler/gems/byebug-11.0.1/ext/byebug
+/Users/sadahiro/.rbenv/versions/2.3.1/bin/ruby -r ./siteconf20190511-13927-1427iz5.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sadahiro/rails_projects/sharetrip/vendor/bundler/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/sadahiro/rails_projects/sharetrip/vendor/bundler/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR="
+compiling locker.c
+compiling byebug.c
+compiling context.c
+compiling breakpoint.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/sadahiro/rails_projects/sharetrip/vendor/bundler/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/local/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20190511-13927-bcvblh/byebug
