@@ -1,2 +1,14 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="home_content">
+<div class="row">
+<div class="col-lg-6 time_line">
+  <% @post.find_each do |post| %>
+    <div>旅行タイトル</div>
+    <%= post.trip_title %>
+    <div>説明</div>
+    <%= post.content %>
+  <% end %>
+</div>
+<div class="col-lg-2 side_bar">
+  <%= link_to "+ New Plan", posts_index_path, class: 'btn-square' %>
+</div>
+</div>

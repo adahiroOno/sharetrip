@@ -4,12 +4,20 @@
     <title>Sharetrip</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <header id="header" class="header"> 
+      <h1 class="home_title">ShareTrip</h1>
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, class: 'btn-square logout_btn', :method => :delete) %>
+      <% end %>
+    </header>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div class="container">
     <%= yield %>
+  </div>
   </body>
 </html>

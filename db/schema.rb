@@ -10,7 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_11_151635) do
+ActiveRecord::Schema.define(version: 2019_05_14_141140) do
+
+  create_table "plan_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "post_id"
+    t.string "content"
+    t.string "plan_title"
+    t.string "start_point"
+    t.string "goal_point"
+    t.time "duration"
+    t.datetime "start_date"
+    t.datetime "close_date"
+    t.bigint "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.string "content", null: false
+    t.string "trip_title", null: false
+    t.bigint "total_cost"
+    t.datetime "start_date"
+    t.datetime "close_date"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
