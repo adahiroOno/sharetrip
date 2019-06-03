@@ -1,14 +1,19 @@
 <div class="home_content">
 <div class="row">
-<div class="col-lg-6 time_line">
+<div class="col-lg-8">
   <% @post.find_each do |post| %>
+    <div class="card ">
     <div>旅行タイトル</div>
     <%= post.trip_title %>
     <div>説明</div>
-    <%= post.content %>
+    <%= post.content %></br>
+      <%= link_to '詳細', edit_post_path(post), class: 'btn-square' %>
+    </div>
   <% end %>
 </div>
-<div class="col-lg-2 side_bar">
-  <%= link_to "+ New Plan", posts_index_path, class: 'btn-square' %>
+<% if user_signed_in? %>
+<div class="offset-md-2 col-lg-2">
+  <%= link_to "+ New Plan", posts_index_path, class: 'btn btn-primary' %>
 </div>
+<% end %>
 </div>
