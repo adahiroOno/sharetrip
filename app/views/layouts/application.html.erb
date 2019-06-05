@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sharetrip</title>
+    <title>Share trip</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <header id="header" class="header"> 
-      <h1 class="home_title">ShareTrip</h1>
-      <% if user_signed_in? %>
-        <%= link_to('Logout', destroy_user_session_path, class: 'btn-square logout_btn', :method => :delete) %>
-      <% end %>
+    <header id="header" class="header">   
+      <%= link_to('Share Trip', root_path, id: 'home_title') %>
+        <div class="header-btn">
+          <% if user_signed_in? %>
+            <%= link_to('ログアウト', destroy_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn', :method => :delete) %>
+          <% else %>
+            <%- if controller_name == 'home' %>
+              <%= link_to "ログイン", new_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn' %>
+              <%= link_to "アカウント作成", new_user_registration_path, class: 'btn-sm btn-light float-right devise-header-btn' %>
+            <% end %>
+          <% end %>
+        </div>
     </header>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,7 +23,13 @@
   </head>
 
   <body>
-  <div class="container">
+    <%- if controller_name == 'home' %>
+      <% if Post.all.size < 0 %>
+        <div class="main_title">Share Trip</div>
+        <div><%= image_tag('header.jpg', class: "img-responsive center-block header_img") %></div>
+      <% end %>
+    <% end %>   
+  <div class="container body-content">
     <%= yield %>
   </div>
   </body>
