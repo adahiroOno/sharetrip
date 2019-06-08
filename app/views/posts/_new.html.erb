@@ -1,0 +1,14 @@
+<%= form_for @post, :url => posts_path, remote: true do |f| %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+    <div class="form-user card">
+      <div class="card-body">
+        <div class="card-title">          
+          <div><%= f.label :trip_title, "Trip Title", class: "form-group" %></div>
+          <div><%= f.text_field :trip_title, class: "form-control post-card" %></div>
+          <div><%= f.label :trip_title, "説明", class: "form-group" %></div>
+          <div><%= f.text_field :content, class: "form-control post-card" %></div>
+          <div><%= f.submit "New", class: "btn btn-primary add-btn float-right" %></div>
+        </div>
+      </div>
+    </div>
+<% end %>

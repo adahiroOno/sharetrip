@@ -10,11 +10,12 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.save!
-    redirect_to edit_post_path(@post)
+    render partial: 'edit', locals: { :results => @post }
   end
 
   def edit
     @post = Post.find(params[:id])
+    render partial: 'edit', locals: { :results => @post }
   end
 
   def update
@@ -31,5 +32,6 @@ class PostsController < ApplicationController
   end 
 
   def plan_params
+    params.require(:plan).permit!
   end
 end
