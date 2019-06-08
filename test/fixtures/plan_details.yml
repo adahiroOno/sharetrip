@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  post_id: 
+  content: MyString
+  plan_title: MyString
+  start_point: MyString
+  goal: 
+  duration: 2019-05-14 22:08:04
+  start_date: 2019-05-14 22:08:04
+  close_date: 2019-05-14 22:08:04
+  cost: 
+
+two:
+  user_id: 
+  post_id: 
+  content: MyString
+  plan_title: MyString
+  start_point: MyString
+  goal: 
+  duration: 2019-05-14 22:08:04
+  start_date: 2019-05-14 22:08:04
+  close_date: 2019-05-14 22:08:04
+  cost: 

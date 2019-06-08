@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: sharetrip_production
-  username: sharetrip
+  database: heroku_c35c7416b2b3c99
+  username: b9afd613ebe323
   password: <%= ENV['SHARETRIP_DATABASE_PASSWORD'] %>

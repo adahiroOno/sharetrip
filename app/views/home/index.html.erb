@@ -1,2 +1,19 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="home_content">
+<div class="row">
+<div class="col-lg-8">
+  <% @post.find_each do |post| %>
+    <div class="card ">
+    <div>旅行タイトル</div>
+    <%= post.trip_title %>
+    <div>説明</div>
+    <%= post.content %></br>
+      <%= link_to '詳細', edit_post_path(post), class: 'btn-square' %>
+    </div>
+  <% end %>
+</div>
+<% if user_signed_in? %>
+<div class="offset-md-1 col-lg-2">
+  <%= link_to "+ New Plan", posts_index_path, class: 'btn btn-primary add-btn' %>
+</div>
+<% end %>
+</div>
