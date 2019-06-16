@@ -1,0 +1,35 @@
+<% if @detail.size > 0 %>
+  <%= @detail.find_each do |detail| %>
+    <div class="form-user card">
+      <div class="card-body">
+        <div class="card-title">
+            <div>Plan Title</div>
+            <div><%= detail.plan_title %></div>
+
+            <div>金額</div>
+            <div><%= detail.cost %></div>
+
+            <div>開始日</div>
+            <div><%= detail.start_date %></div>         
+
+            <div>終了日</div>
+            <div><%= detail.close_date %></div>
+
+            <div>出発地</div>
+            <div><%= detail.start_point %></div>
+
+            <div>目的地</div>
+            <div><%= detail.goal_point %></div>
+
+            <div>所要時間</div>
+            <div><%= detail.duration %></div>
+
+            <div>Detail</div>
+            <div><%= detail.content %></div>
+            <%= link_to('Delete', plan_path(id: detail.id), class: 'btn btn-primary add-btn', :method => :delete) %>
+            <%= link_to "Detail", plan_path(id: detail.id), class: 'btn btn-primary add-btn' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

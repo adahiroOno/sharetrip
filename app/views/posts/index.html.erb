@@ -1,19 +1,18 @@
-
 <%= form_for @post, :url => posts_path do |f| %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
     <div class="form-user card">
       <div class="card-body">
-        <div class="card-title">          
+        <div class="card-title">        
           <div><%= f.label :trip_title, "Trip Title", class: "form-group" %></div>
           <div><%= f.text_field :trip_title, class: "form-control post-card" %></div>
           <div><%= f.label :trip_title, "説明", class: "form-group" %></div>
           <div><%= f.text_field :content, class: "form-control post-card" %></div>
-          <div><%= f.submit "追加", class: "btn btn-primary float-right" %></div>
+          <div><%= f.submit "NEW", class: "btn btn-primary float-right add-btn" %></div>
         </div>
       </div>
     </div>
 　<% end %>
 
 <div class="col-lg-2 pl-0">
-  <%= link_to "タイムライン", home_index_path, class: 'btn btn-primary float-left' %>
+  <%= link_to "タイムライン", home_index_path, class: 'btn btn-primary float-left add-btn' %>
 </div>

@@ -15,6 +15,8 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @detail = PlanDetail.where(post_id: params[:id]) 
+    @plan = PlanDetail.new
   end
 
   def update

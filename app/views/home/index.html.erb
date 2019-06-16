@@ -7,13 +7,13 @@
     <%= post.trip_title %>
     <div>説明</div>
     <%= post.content %></br>
-      <%= link_to '詳細', edit_post_path(post), class: 'btn-square' %>
+      <%= link_to '詳細', edit_post_path(post), class: 'btn-square add-btn' %>
     </div>
   <% end %>
 </div>
 <% if user_signed_in? %>
 <div class="offset-md-2 col-lg-2">
-  <%= link_to "+ New Plan", posts_index_path, class: 'btn btn-primary' %>
+  <%= link_to "+ New Plan", posts_index_path, class: 'btn btn-primary add-btn' %>
 </div>
 <% end %>
 </div>

@@ -1,0 +1,36 @@
+<%= form_for @plan, :url => plans_path do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+      <div class="form-user card">
+        <div class="card-body">
+          <div class="card-title">
+            <%= f.hidden_field :post_id, :value => @post.id %>
+            <div><%= f.label :plan_title, "Plan Title", class: "form-group" %></div>
+            <div><%= f.text_field :plan_title, class: "form-control post-card " %></div>
+  
+            <div><%= f.label :cost, "金額", class: "form-group" %></div>
+            <div><%= f.text_field :cost, class: "form-control cost_form cost_form cost_name" %> 円</div>
+  
+            <div><%= f.label :start_date, "開始日", class: "form-group" %></div>
+            <div><%= f.date_field :close_date, class: "form-control post-card" %></div>
+  
+            <div><%= f.label :close_date, "終了日", class: "form-group" %></div>
+            <div><%= f.date_field :close_date, class: "form-control post-card" %></div>
+  
+            <div><%= f.label :start_point, "出発地", class: "form-group" %></div>
+            <div><%= f.text_field :start_point, class: "form-control post-card" %></div>
+  
+            <div><%= f.label :goal_point, "目的地", class: "form-group" %></div>
+            <div><%= f.text_field :goal_point, class: "form-control post-card" %></div>
+  
+  
+            <div><%= f.label :duration, "所要時間", class: "form-group" %></div>
+            <div><%= f.time_field :duration, class: "form-control post-card" %></div>
+  
+            <div><%= f.label :content, "Detail", class: "form-group" %></div>
+            <div><%= f.text_field :content, class: "form-control post-card" %></div>
+  
+            <div><%= f.submit "Add", class: "btn btn-primary float-right add-btn" %></div>
+          </div>
+        </div>
+      </div>
+  　<% end %>
