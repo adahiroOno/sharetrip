@@ -10,10 +10,18 @@
             <div><%= detail.cost %></div>
 
             <div>開始日</div>
-            <div><%= detail.start_date %></div>         
+            <% if detail.start_date.present? %>
+              <div><%= detail.start_date.strftime('%Y/%m/%d') %></div>
+            <% else %>
+              <div><%= detail.start_date %></div>
+            <% end %>
 
             <div>終了日</div>
-            <div><%= detail.close_date %></div>
+            <% if detail.close_date.present? %>
+              <div><%= detail.close_date.strftime('%Y/%m/%d') %></div>
+            <% else %>
+              <div><%= detail.close_date %></div>
+            <% end %>
 
             <div>出発地</div>
             <div><%= detail.start_point %></div>
@@ -22,7 +30,11 @@
             <div><%= detail.goal_point %></div>
 
             <div>所要時間</div>
-            <div><%= detail.duration %></div>
+            <% if detail.duration.present? %>
+              <div><%= detail.duration.strftime('%H:%M:%S') %></div>
+            <% else %>
+              <div><%= detail.duration %></div>
+            <% end %>
 
             <div>Detail</div>
             <div><%= detail.content %></div>

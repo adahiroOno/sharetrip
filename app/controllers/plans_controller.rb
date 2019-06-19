@@ -24,6 +24,6 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan_detail).permit!
+    params.require(:plan_detail).permit(:plan_title, :user_id, :post_id, :content, :plan_title, :start_point, :goal_point, :duration, :start_date, :close_date, :cost)
   end
 end
