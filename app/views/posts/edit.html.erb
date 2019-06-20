@@ -1,7 +1,10 @@
-
-<%= render 'posts/update_trip' %>
+<% if current_user.id == @post.user_id %>
+  <%= render 'posts/update_trip' %>
+<% end %>
 <%= render '/plans/index' %>
-<%= render 'posts/new_plan' %>
+<% if current_user.id == @post.user_id %>
+  <%= render 'posts/new_plan' %>
+<% end %>
 
 <div class="col-lg-2 pl-0">
   <%= link_to "タイムライン", home_index_path, class: 'btn btn-primary float-left' %>

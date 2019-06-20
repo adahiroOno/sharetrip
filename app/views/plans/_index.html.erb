@@ -38,8 +38,10 @@
 
             <div>Detail</div>
             <div><%= detail.content %></div>
-            <%= link_to('Delete', plan_path(id: detail.id), class: 'btn btn-primary add-btn', :method => :delete) %>
-            <%= link_to "Detail", plan_path(id: detail.id), class: 'btn btn-primary add-btn' %>
+            <% if current_user.id == @post.user_id %>
+              <%= link_to('Delete', plan_path(id: detail.id), class: 'btn btn-primary add-btn', :method => :delete) %>
+              <%= link_to "Detail", plan_path(id: detail.id), class: 'btn btn-primary add-btn' %>
+            <% end %>
         </div>
       </div>
     </div>

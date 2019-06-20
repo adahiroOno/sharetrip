@@ -39,7 +39,7 @@
    }
  #home_title{
      font-size: 36px;
-     margin: 2px 0 0 10%;
+     margin: 2px 0 0 3%;
      font-family: 'Kaushan Script', cursive;    
      vertical-align: middle;
      color: rgb(255, 255, 255);
@@ -67,6 +67,9 @@ body{
 }
 .body-content {
   padding-top: 100px;
+}
+.time_line {
+  overflow:auto;
 }
 .login{
   text-align: center;
@@ -110,10 +113,30 @@ body{
 }
 .card {
   border: none;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
+  position: relative;
+  min-height: 300px;
   box-shadow: 0 0 20px rgba(0,0,0,.5);
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.85);
+}
+.flow_trip_title{
+  padding: 5%;
+  font-size: 30px;
+  background-color: rgba(39, 184, 228, 0.755);
+  text-align: center;
+  width: 100%;
+}
+.flow_user_name {
+  padding: 10px 0 10px 5px;
+}
+#card_detail_link {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .add-btn {
   background: linear-gradient(-45deg, rgba(87, 225, 181, 1) 0%, rgba(0, 63, 255,0.8) 100%);

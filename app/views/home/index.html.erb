@@ -1,19 +1,15 @@
 <div class="home_content">
 <div class="row">
-<div class="col-lg-8">
+<div class="col-lg-8 mx-auto time_line">
   <% @post.find_each do |post| %>
-    <div class="card ">
-    <div>旅行タイトル</div>
-    <%= post.trip_title %>
-    <div>説明</div>
-    <%= post.content %></br>
-      <%= link_to '詳細', edit_post_path(post), class: 'btn-square add-btn' %>
-    </div>
+    <% unless PlanDetail.where(post_id: post.id).blank? %>
+      <div class="card">
+      <div class="flow_user_name"><%= User.find(post.user_id).name %></div>
+      <div class="flow_trip_title"><%= post.trip_title %></div>
+      <div class="flow_desc_title"><%= post.content %></div></br>
+        <%= link_to '', edit_post_path(post), id: 'card_detail_link' %>
+      </div>
+    <% end %>
   <% end %>
 </div>
-<% if user_signed_in? %>
-<div class="offset-md-2 col-lg-2">
-  <%= link_to "+ New Plan", posts_index_path, class: 'btn btn-primary add-btn' %>
-</div>
-<% end %>
 </div>
