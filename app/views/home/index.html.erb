@@ -3,10 +3,12 @@
 <div class="col-lg-8 mx-auto time_line">
   <% @post.find_each do |post| %>
     <% unless PlanDetail.where(post_id: post.id).blank? %>
-      <div class="card">
+      <div class="card" id="home_card">
       <div class="flow_user_name"><%= User.find(post.user_id).name %></div>
-      <div class="flow_trip_title"><%= post.trip_title %></div>
-      <div class="flow_desc_title"><%= post.content %></div></br>
+      <%= image_tag("header.jpg", :height => "300", :class => "sample_photo") %>
+      <div class="flow_trip_title"> 
+        <%= post.trip_title %>
+      </div>
         <%= link_to '', edit_post_path(post), id: 'card_detail_link' %>
       </div>
     <% end %>

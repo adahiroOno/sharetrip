@@ -61,7 +61,8 @@
   text-align: center;
 }
 body{
-  background-image: linear-gradient(-90deg, #1A7B0F, #089CC9);
+  // background-image: linear-gradient(-90deg, #1A7B0F, #089CC9);
+  background-color: #f0f0f0;
   height: 100%;
   width: 100%;
 }
@@ -120,11 +121,20 @@ body{
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.85);
 }
+#home_card {
+  box-shadow: 0 0 12px rgba(0,0,0,.4);
+  margin-top: 10px;
+}
+.sample_photo{
+  border-radius: 0 0 5px 5px;
+}
 .flow_trip_title{
-  padding: 5%;
-  font-size: 30px;
-  background-color: rgba(39, 184, 228, 0.755);
-  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  position: absolute; 
+  bottom: 0;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(255, 255, 255, 0.55);
   width: 100%;
 }
 .flow_user_name {
