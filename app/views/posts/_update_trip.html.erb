@@ -3,7 +3,7 @@
   <div class="form-user card">
     <div class="card-body">
       <div class="card-title">          
-        <div><%= f.label :trip_title, "Trip Title", class: "form-group" %></div>
+        <div><%= f.label :trip_title, "Trip Title", class: "form-group" %><span class="float-right">合計:&nbsp;&nbsp;<%= @post.total_cost %>円</span></div>
         <div><%= f.text_field :trip_title, class: "form-control post-card" %></div>
         <div><%= f.label :trip_title, "Detail", class: "form-group" %></div>
         <div><%= f.text_field :content, class: "form-control post-card" %></div>

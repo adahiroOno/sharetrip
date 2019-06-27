@@ -15,6 +15,7 @@
           <% if user_signed_in? %>
             <%= link_to('ログアウト', destroy_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn', :method => :delete) %>
             <%= link_to "+ New Plan", posts_index_path, class: 'btn btn-primary btn-sm float-right add-btn devise-header-btn' %>
+            <%= link_to "Mytrip", mytrips_index_path, class: 'btn btn-primary btn-sm float-right add-btn devise-header-btn' %>
           <% else %>
             <%- if controller_name == 'home' %>
               <%= link_to "ログイン", new_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn' %>

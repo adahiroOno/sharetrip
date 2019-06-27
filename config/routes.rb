@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'mytrips/index'
   get 'plans/create'
   get 'posts/index'
   get '/users', to: redirect("/users/sign_up")
