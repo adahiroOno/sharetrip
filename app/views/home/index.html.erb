@@ -2,16 +2,22 @@
   <div class="row">
     <div class="col-lg-8 mx-auto time_line">
       <% @post.find_each do |post| %>
-        <% unless PlanDetail.where(post_id: post.id).blank? %>
+        <% unless @detail.where(post_id: post.id).blank? %>
           <div class="card" id="home_card">
             <div class="flow_user_name"><%= User.find(post.user_id).name %></div>
             <%= image_tag("header.jpg", :height => "300", :class => "sample_photo") %>
-            <div class="flow_trip_title"> 
+            <div class="flow_trip_title">
               <%= post.trip_title %>
               <% if post.total_cost.present? %>
                 <span class="float-right"><%= post.total_cost %>円</span>
               <% else %>
                 <span class="float-right">0円</span>
+              <% end %>
+              <% if @detail.where(post_id: post.id).select("start_date").present? && @detail.where(post_id: post.id).select("close_date").present? %>
+              <span class="float-right">
+                <%= calc_date(@detail.where(post_id: post.id)) %>泊
+                <%= calc_date(@detail.where(post_id: post.id)) + 1 %>日&nbsp;&nbsp;
+              </span>
               <% end %>
             </div>
             <%= link_to '', edit_post_path(post), id: 'card_detail_link' %>

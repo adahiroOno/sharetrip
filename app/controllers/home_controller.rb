@@ -4,5 +4,6 @@ class HomeController < ApplicationController
 
   def index
     @post = Post.all
+    @detail = PlanDetail.all
   end
 end
