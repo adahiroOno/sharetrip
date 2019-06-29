@@ -15,8 +15,7 @@
               <% end %>
               <% if @detail.where(post_id: post.id).select("start_date").present? && @detail.where(post_id: post.id).select("close_date").present? %>
               <span class="float-right">
-                <%= calc_date(@detail.where(post_id: post.id)) %>泊
-                <%= calc_date(@detail.where(post_id: post.id)) + 1 %>日&nbsp;&nbsp;
+                <%= calc_date(@detail.where(post_id: post.id)) %>泊<%= calc_date(@detail.where(post_id: post.id)) + 1 %>日&nbsp;&nbsp;
               </span>
               <% end %>
             </div>
