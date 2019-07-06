@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 
 
   def index
-    @post = Post.all
+    @posts = Post.order(:created_at).page(params[:page])
     @detail = PlanDetail.all
   end
 end

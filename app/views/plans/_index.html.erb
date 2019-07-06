@@ -3,11 +3,13 @@
     <div class="form-user card">
       <div class="card-body">
         <div class="card-title">
-            <div>Plan Title</div>
-            <div><%= detail.plan_title %></div>
-
-            <div>金額</div>
-            <div><%= detail.cost %></div>
+            <div>
+            <% if current_user.id == @post.user_id %>
+              <%= link_to(content_tag(:i, 'close', class: 'material-icons delete_img'), plan_path(id: detail.id), :method => :delete) %>
+              <%= link_to(content_tag(:i, 'edit', class: 'material-icons edit_img'), plan_path(id: detail.id)) %>
+            <% end %>
+              Plan Title 
+            </div>
 
             <div>開始日</div>
             <% if detail.start_date.present? %>
@@ -22,6 +24,12 @@
             <% else %>
               <div><%= detail.close_date %></div>
             <% end %>
+            <div><%= detail.plan_title %></div>
+
+            <div>金額</div>
+            <div><%= detail.cost %></div>
+
+
 
             <div>出発地</div>
             <div><%= detail.start_point %></div>
@@ -38,10 +46,6 @@
 
             <div>Detail</div>
             <div><%= detail.content %></div>
-            <% if current_user.id == @post.user_id %>
-              <%= link_to('Delete', plan_path(id: detail.id), class: 'btn btn-primary add-btn', :method => :delete) %>
-              <%= link_to "Detail", plan_path(id: detail.id), class: 'btn btn-primary add-btn' %>
-            <% end %>
         </div>
       </div>
     </div>
