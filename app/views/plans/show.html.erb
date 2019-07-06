@@ -1,0 +1,34 @@
+    <div class="form-user card">
+      <div class="card-body">
+        <div class="card-title">          
+          <%= form_for @detail, :url => plan_path do |plan| %>
+            <div><%= plan.label :plan_title, "Plan Title", class: "form-group" %></div>
+            <div><%= plan.text_field :plan_title, class: "form-control post-card " %></div>
+  
+            <div><%= plan.label :cost, "金額", class: "form-group" %></div>
+            <div><%= plan.text_field :cost, class: "form-control cost_form cost_form cost_name" %> 円</div>
+  
+            <div><%= plan.label :start_date, "開始日", class: "form-group" %></div>
+            <div><%= plan.date_field :start_date, class: "form-control post-card" %></div>
+  
+            <div><%= plan.label :close_date, "終了日", class: "form-group" %></div>
+            <div><%= plan.date_field :close_date, class: "form-control post-card" %></div>
+  
+            <div><%= plan.label :start_point, "出発地", class: "form-group" %></div>
+            <div><%= plan.text_field :start_point, class: "form-control post-card" %></div>
+  
+            <div><%= plan.label :goal_point, "目的地", class: "form-group" %></div>
+            <div><%= plan.text_field :goal_point, class: "form-control post-card" %></div>
+  
+  
+            <div><%= plan.label :duration, "所要時間", class: "form-group" %></div>
+            <div><%= plan.time_field :duration, class: "form-control post-card" %></div>
+  
+            <div><%= plan.label :content, "Detail", class: "form-group" %></div>
+            <div><%= plan.text_field :content, class: "form-control post-card" %></div>
+  
+            <div><%= plan.submit "Update", class: "btn btn-primary float-right add-btn" %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>

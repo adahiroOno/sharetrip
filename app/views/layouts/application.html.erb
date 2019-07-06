@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sharetrip</title>
+    <title>Share trip</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header id="header" class="header">   
+      <%= link_to('Share Trip', root_path, id: 'home_title') %>
+        <div class="header-btn">
+          <% if user_signed_in? %>
+            <%= link_to('ログアウト', destroy_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn', :method => :delete) %>
+            <%= link_to "+ New Plan", posts_index_path, class: 'btn btn-primary btn-sm float-right add-btn devise-header-btn' %>
+            <%= link_to "Mytrip", mytrips_index_path, class: 'btn btn-primary btn-sm float-right add-btn devise-header-btn' %>
+          <% else %>
+            <%- if controller_name == 'home' %>
+              <%= link_to "ログイン", new_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn' %>
+              <%= link_to "アカウント作成", new_user_registration_path, class: 'btn-sm btn-light float-right devise-header-btn' %>
+            <% end %>
+          <% end %>
+        </div>
+    </header>
+  <div class="container body-content">
     <%= yield %>
+  </div>
   </body>
 </html>

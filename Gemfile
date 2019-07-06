@@ -20,8 +20,13 @@ gem 'uglifier', '>= 1.3.0'
 # Devise
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'kaminari'
+gem 'jquery-turbolinks'
+gem "jquery-rails"
 #Bootstrap
 gem "bootstrap", ">= 4.3.1"
+gem 'rails-i18n', '~> 5.1'
+gem 'devise-i18n-views'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -45,6 +50,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do

@@ -1,0 +1,168 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+ @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+ @import "bootstrap";
+ .header{
+     background:#fff;
+     box-shadow:0 2px 8px rgba(30,30,80,.3);
+     left:0;
+     line-height:1;
+     position:fixed;
+     top:0;
+     width:100%;
+     background-image: linear-gradient(-90deg, #80B3FF, #5AC3DD);
+     height: 50px;
+     z-index:24;
+   }
+   .header_img {
+     height: auto;
+     width: 100%;
+     filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+     box-shadow:
+     inset 0 0 20px #fff /* 背景色と同じ色 */,
+     inset 0 0 20px #fff,
+     inset 0 0 20px #fff,
+     inset 0 0 20px #fff;
+   }
+ #home_title{
+     font-size: 36px;
+     margin: 2px 0 0 3%;
+     font-family: 'Kaushan Script', cursive;    
+     vertical-align: middle;
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+     float: left;
+ }
+ .devise-header-btn {
+  margin: 10px 10px 0 0;
+  text-align: center;
+ }
+ .header-btn {
+  margin: 0 1% 0 0;
+ }
+.main_title {
+  font-family: 'Kaushan Script', cursive;
+  margin: 50px 0 10px 0;
+  font-size: 20vmin;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+body{
+  // background-image: linear-gradient(-90deg, #1A7B0F, #089CC9);
+  background-color: #f0f0f0;
+  height: 100%;
+  width: 100%;
+}
+.body-content {
+  padding-top: 100px;
+}
+.time_line {
+  overflow:auto;
+}
+.login{
+  text-align: center;
+}
+.devise-text {
+  margin-left: 5%;
+  float: left;
+}
+.devise-text-pass {
+  float: left;
+}
+.devise-text-title {
+  margin-left: 5%;
+  text-align: left;
+  padding: 10px 0 0 0;
+}
+.post-card {
+  margin: 10px 0;
+}
+.cost_form {
+  width: 98%;
+}
+#plan_detail_cost{
+  clear: right;
+  display: inline;
+  margin-bottom: 10px;
+}
+.info-control {
+  width: 90%;
+}
+.btn-control {
+  width: 90%;
+  margin: 10px 0;
+}
+.card-width {
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#error_explanation {
+  background-color: rgba(240, 91, 91, 0.954);
+}
+.card {
+  border: none;
+  margin: 0 0 20px 0;
+  position: relative;
+  min-height: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+#home_card {
+  box-shadow: 0 0 12px rgba(0,0,0,.4);
+  margin-top: 10px;
+}
+.sample_photo{
+  border-radius: 0 0 5px 5px;
+}
+.flow_trip_title{
+  padding: 10px;
+  font-size: 20px;
+  position: absolute; 
+  bottom: 0;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(235, 234, 234, 0.817);
+  width: 100%;
+}
+.flow_user_name {
+  padding: 10px 0 10px 5px;
+}
+#card_detail_link {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.add-btn {
+  background: linear-gradient(-45deg, rgba(87, 225, 181, 1) 0%, rgba(0, 63, 255,0.8) 100%);
+  box-shadow: 0 5px 20px rgba(0, 63, 255, .5);
+  border: none;
+}
+.delete_img {
+  text-decoration: none;
+  color:#000; 
+  float: right;
+  top: 0;
+}
+.edit_img  {
+  text-decoration: none;
+  color:#000; 
+  float: right;
+  top: 0;
+}
