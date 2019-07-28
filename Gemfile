@@ -20,6 +20,9 @@ gem 'uglifier', '>= 1.3.0'
 # Devise
 gem 'devise'
 gem 'omniauth-twitter'
+gem 'kaminari'
+gem 'jquery-turbolinks'
+gem "jquery-rails"
 #Bootstrap
 gem "bootstrap", ">= 4.3.1"
 gem 'rails-i18n', '~> 5.1'
