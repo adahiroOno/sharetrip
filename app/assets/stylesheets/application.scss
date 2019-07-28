@@ -131,6 +131,7 @@ body{
 }
 .sample_photo{
   border-radius: 0 0 5px 5px;
+  object-fit: cover;
 }
 .flow_trip_title{
   padding: 10px;
@@ -182,9 +183,17 @@ body{
   border-radius: 10px;
 }
 .post_show_title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 .post_show_total {
   font-size: 20px;
+}
+.title_edit_img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.show_title_content {
+  margin-top: 10px;
 }

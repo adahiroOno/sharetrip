@@ -1,11 +1,18 @@
-<% if current_user.id == @post.user_id %>
-  <%= render 'posts/show_trip' %>
-<% end %>
-<%= render '/plans/index' %>
-<% if current_user.id == @post.user_id %>
-  <%= render 'posts/new_plan' %>
-<% end %>
+<div class="row">
+  <div class="col-lg-8 mx-auto">
+    <% if current_user.id == @post.user_id %>
+      <%= render 'posts/show_trip' %>
+    <% end %>
+    <%= render '/plans/index' %>
+    <% if current_user.id == @post.user_id %>
+      <%= render 'posts/new_plan' %>
+    <% end %>
+  </div>
+</div>
 
+
+<% if false %>
 <div class="col-lg-2 pl-0">
   <%= link_to "タイムライン", home_index_path, class: 'btn btn-primary float-left' %>
 </div>
+<% end %>
