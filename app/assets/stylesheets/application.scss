@@ -133,7 +133,6 @@ body{
   object-fit: cover;
 }
 .flow_trip_title{
-  padding: 10px;
   position: absolute; 
   bottom: 0;
   border-radius: 0 0 5px 5px;
@@ -200,6 +199,7 @@ body{
   }
   .flow_trip_title{
     font-size:  1.5vw;
+    padding: 0.4vw;
   }
   .main_title {
     font-size:   5vw;
@@ -220,6 +220,7 @@ body{
   }
   .flow_trip_title{
     font-size:  4vw;
+    padding: 0.4vw;
   }
   .main_title {
     font-size: 4vw;
@@ -240,12 +241,16 @@ body{
   }
   .flow_trip_title{
     font-size:  1.5vw;
+    padding: 0.4vw;
   }
   .main_title {
     font-size:   5vw;
   }
   #home_title{
     font-size: 7vw;
+  }
+  .card {
+    min-height: 15vw;
   }
  }
  // @include media-breakpoint-up(sm) {
@@ -265,11 +270,15 @@ body{
   }
   .flow_trip_title{
     font-size:  3.5vw;
+    padding: 0.6vw;
   }
   .main_title {
     font-size: 7vw;
   }
   #home_title{
-    font-size: 7vw;
+    font-size: 6.5vw;
+  }
+  .card {
+    min-height: 15vw;
   }
  }
