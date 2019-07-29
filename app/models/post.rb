@@ -4,7 +4,7 @@ class Post < ApplicationRecord
   belongs_to :user
 
   validates :trip_title,
-    length: { maximum: 30},
+    length: { maximum: 15},
     presence: true  
   validates :content,
     length: {maximum: 150},
