@@ -1,37 +1,39 @@
-<div class="login">
-  <div class="card card-width mx-auto">
-    <h2 class="devise-text-title">アカウント作成</h2>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-
-      <div class="field">
-        <%= f.label :name, 'ユーザー名', class: 'devise-text' %><br />
-        <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control info-control mx-auto' %>
-      </div>
-
-      <div class="field">
-        <%= f.label :email, 'メールアドレス', class: 'devise-text' %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control info-control mx-auto' %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password, 'パスワード', class: 'devise-text' %>
-        <% if @minimum_password_length %>
-        <em class='devise-text-pass'>(<%= @minimum_password_length %> 文字以上)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password", class: 'form-control info-control mx-auto' %>
-      </div>
-    
-      <div class="field">
-        <%= f.label :password_confirmation, 'パスワード再入力', class: 'devise-text' %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control info-control mx-auto' %></br>
-      </div>
-    
-      <div class="actions">
-        <%= f.submit "アカウント登録", class: 'btn btn-primary btn-control'%>
-      </div>
-    <% end %>
-    
-    <%= render "devise/shared/links" %>
+<div class="container-fluid body-content">
+  <div class="login">
+  　<div class="card card-width mx-auto">
+      <h2 class="devise-text-title">アカウント作成</h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+  
+        <div class="field">
+          <%= f.label :name, 'ユーザー名', class: 'devise-text' %><br />
+          <%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control info-control mx-auto' %>
+        </div>
+  
+        <div class="field">
+          <%= f.label :email, 'メールアドレス', class: 'devise-text' %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control info-control mx-auto' %>
+        </div>
+  
+        <div class="field">
+          <%= f.label :password, 'パスワード', class: 'devise-text' %>
+          <% if @minimum_password_length %>
+          <em class='devise-text-pass'>(<%= @minimum_password_length %> 文字以上)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: 'form-control info-control mx-auto' %>
+        </div>
+      
+        <div class="field">
+          <%= f.label :password_confirmation, 'パスワード再入力', class: 'devise-text' %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control info-control mx-auto' %></br>
+        </div>
+      
+        <div class="actions">
+          <%= f.submit "アカウント登録", class: 'btn btn-primary btn-control'%>
+        </div>
+      <% end %>
+      
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
 </div>
