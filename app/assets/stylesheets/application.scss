@@ -230,6 +230,7 @@ body{
   }
   .card {
     min-height: 15vw;
+    min-width: 100%;
   }
  }
  // 小デバイス（横向きモバイル, 768px 未満）
@@ -254,6 +255,7 @@ body{
   }
   .card {
     min-height: 15vw;
+    min-width: 100%;
   }
  }
  // @include media-breakpoint-up(sm) {
@@ -283,5 +285,6 @@ body{
   }
   .card {
     min-height: 15vw;
+    min-width: 100%;
   }
  }
