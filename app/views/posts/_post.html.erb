@@ -1,4 +1,4 @@
-<div class="col-lg-8 mx-auto time_line">
+<div class="col-lg-6 mx-auto time_line">
   <% unless @detail.where(post_id: post.id).blank? %>
     <div class="card" id="home_card">
       <div class="flow_user_name"><%= User.find(post.user_id).name %></div>

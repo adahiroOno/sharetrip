@@ -16,17 +16,18 @@
   </head>
 
   <body>
-    <header id="header" class="header">   
+    <header id="header" class="header">
       <%= link_to('Share Trip', root_path, id: 'home_title') %>
         <div class="header-btn">
           <% if user_signed_in? %>
-            <%= link_to('ログアウト', destroy_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn', :method => :delete) %>
+            <%= link_to('Logout', destroy_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn',id: 'logout_btn', :method => :delete) %>
             <%= link_to "+ New Plan", posts_index_path, class: 'btn btn-primary btn-sm float-right add-btn devise-header-btn' %>
             <%= link_to "Mytrip", mytrips_index_path, class: 'btn btn-primary btn-sm float-right add-btn devise-header-btn' %>
           <% else %>
             <%- if controller_name == 'home' %>
               <%= link_to "ログイン", new_user_session_path, class: 'btn-sm btn-light float-right devise-header-btn' %>
               <%= link_to "アカウント作成", new_user_registration_path, class: 'btn-sm btn-light float-right devise-header-btn' %>
+              <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
             <% end %>
           <% end %>
         </div>
