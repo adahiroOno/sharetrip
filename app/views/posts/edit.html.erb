@@ -3,10 +3,10 @@
     <% if current_user.id == @post.user_id %>
       <%= render 'posts/show_trip' %>
     <% end %>
-    <%= render '/plans/index' %>
     <% if current_user.id == @post.user_id %>
       <%= render 'posts/new_plan' %>
     <% end %>
+    <%= render '/plans/index' %>
   </div>
 </div>
 

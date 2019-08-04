@@ -11,31 +11,31 @@
             </div>
 
             <!-- <div>開始日</div> -->
-            <span>
-              <% if detail.start_date.present? %>
-                
-                <%= detail.start_date.strftime('%Y/%m/%d') %> ~
+            <div class="row">
+              <div class="col-lg-3 show_date col-md-3 col-sm-5 col-xs-6 pl-0">
+              <% if detail.start_date.present? %>             
+                <%= detail.start_date.strftime('%Y/%m/%d') %></br>
+                <%= detail.start_date.strftime('%H:%M') %>
               <% else %>
                 <%= detail.start_date %>
               <% end %>
-            </span>
-
-            <!--   <div>終了日</div> -->
-            <span>
-              <% if detail.close_date.present? %>
-                <%= detail.close_date.strftime('%Y/%m/%d') %>
-              <% else %>
-                <%= detail.close_date %>
-              <% end %>
-            </span>
-    
-            <div>
-              <% if detail.start_date.present? %>                
-                <%= detail.start_date.strftime('%H:%M') %> ~
-              <% end %>
-              <% if detail.close_date.present? %>
-                <%= detail.close_date.strftime('%H:%M') %>
-              <% end %>
+              </div>
+              <div class="col-lg-1 col-md-1 col-sm-1 show_date d-flex align-items-center">
+                <% if detail.start_date.present? %>         
+                  ~
+                <% end %>
+              </div>
+              <div class="col-lg-3 show_date col-md-3 col-sm-5 col-xs-10">
+              <!--   <div>終了日</div> -->
+                <% if detail.close_date.present? %>
+                  <%= detail.close_date.strftime('%Y/%m/%d') %></br>
+                <% else %>
+                  <%= detail.close_date %>
+                <% end %>
+                <% if detail.close_date.present? %>
+                  <%= detail.close_date.strftime('%H:%M') %>
+                <% end %>
+              </div>
             </div>
 
             <div class=""><%= detail.plan_title %></div>

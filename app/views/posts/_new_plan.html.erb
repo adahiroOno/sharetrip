@@ -7,12 +7,12 @@
             <div class="col-lg-6">
               <%= f.hidden_field :post_id, :value => @post.id %>
               <div><%= f.label :plan_title, "Plan Title" %></div>
-              <div><%= f.text_field :plan_title, class: "form-control" %></div>
+              <div><%= f.text_field :plan_title, class: "form-control post-card" %></div>
             </div>
 
             <div class="col-lg-6">
               <div><%= f.label :cost, "金額" %></div>
-              <div><%= f.text_field :cost, class: "form-control cost_form post-card" %> </div>
+              <div><%= f.text_field :cost, class: "form-control post-card" %></div>
             </div>
             </div>
 
