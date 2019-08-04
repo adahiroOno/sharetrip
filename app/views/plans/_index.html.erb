@@ -11,48 +11,45 @@
             </div>
 
             <!-- <div>開始日</div> -->
-            <div class="row">
-              <div class="col-lg-3 show_date col-md-3 col-sm-5 col-xs-6 pl-0">
-              <% if detail.start_date.present? %>             
-                <%= detail.start_date.strftime('%Y/%m/%d') %></br>
-                <%= detail.start_date.strftime('%H:%M') %>
-              <% else %>
-                <%= detail.start_date %>
-              <% end %>
-              </div>
-              <div class="col-lg-1 col-md-1 col-sm-1 show_date d-flex align-items-center">
-                <% if detail.start_date.present? %>         
-                  ~
-                <% end %>
-              </div>
-              <div class="col-lg-3 show_date col-md-3 col-sm-5 col-xs-10">
-              <!--   <div>終了日</div> -->
-                <% if detail.close_date.present? %>
-                  <%= detail.close_date.strftime('%Y/%m/%d') %></br>
+            <div class="test">
+              <div class="show_date float-left">
+                <% if detail.start_date.present? %>             
+                 <div class=""><%= detail.start_date.strftime('%Y/%m/%d') %></div>
+                 <div class=""><%= detail.start_date.strftime('%H:%M') %></div>
                 <% else %>
-                  <%= detail.close_date %>
+                <div class=""><%= detail.start_date %></div>
                 <% end %>
-                <% if detail.close_date.present? %>
-                  <%= detail.close_date.strftime('%H:%M') %>
+              </div>
+
+              <div class="show_date d-flex align-items-center float-left">
+                <% if detail.start_date.present? %>         
+                &nbsp;~&nbsp;
                 <% end %>
               </div>
             </div>
 
-            <div class=""><%= detail.plan_title %></div>
-
-            <div>金額</div>
-            <div><%= number_to_currency(detail.cost ||= 0) %></div>
-
-
-
-            <div>出発地</div>
-            <div>
-              <%= detail.start_point %>
-              <%= detail.goal_point %>
+              <div class="show_date float-left">
+                <% if detail.close_date.present? %>
+                  <div class=""><%= detail.close_date.strftime('%Y/%m/%d') %></div>
+                <% else %>
+                  <div class=""><%= detail.close_date %></div>
+                <% end %>
+                <% if detail.close_date.present? %>
+                <div class=""><%= detail.close_date.strftime('%H:%M') %></div>
+                <% end %>
+              </div>
             </div>
 
-            <div>目的地</div>
-            <div></div>
+            <div class="float_clear_left post_show_title"><%= detail.plan_title %>
+              <div class="post_show_total float-right">
+                <%= number_to_currency(detail.cost ||= 0) %>
+              </div>
+            </div>
+
+
+            <div class="post_show_content float-left"><%= detail.start_point %></div>
+            <div class="float-left">&nbsp;-&nbsp;</div>
+            <div class="post_show_content float-left"><%= detail.goal_point %></div>
             
             <% if false %>
               <div>所要時間</div>
@@ -63,8 +60,7 @@
               <% end %>
             <% end %>
 
-            <div>Detail</div>
-            <div><%= detail.content %></div>
+            <div class="post_show_content float_clear_left"><%= detail.content %></div>
         </div>
       </div>
     </div>

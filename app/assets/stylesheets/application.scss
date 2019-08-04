@@ -267,7 +267,7 @@ body{
     height: 60vh;
   }
   .show_date {
-    font-size: 1.2vw;
+    font-size: 3vw;
   }
  }
  // 小デバイス（横向きモバイル, 768px 未満）
@@ -301,7 +301,7 @@ body{
     height: 60vh;
   }
   .show_date {
-    font-size: 2.0vw;
+    font-size: 3.0vw;
     font-weight: bold;
     text-align: center;
   }
@@ -342,7 +342,7 @@ body{
     padding-top: 8vh;
   }
   .show_date {
-    font-size: 2.0vw;
+    font-size: 4vw;
     font-weight: bold;
   }
  }
@@ -355,4 +355,10 @@ body{
  }
  .show_date {
   vertical-align: middle;
+ }
+ .float_clear_left {
+  clear: left;
+ }
+ .show_span {
+  
  }
