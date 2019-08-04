@@ -10,7 +10,7 @@
               <%= post.trip_title %>
               <span class="float-right"><%= number_to_currency(post.total_cost ||= 0) %></span>
               <% if @detail.where(post_id: post.id).select("start_date").present? && @detail.where(post_id: post.id).select("close_date").present? %>
-              <span class="float-right">
+              <span class="float-right home_conunt_days">
                 <%= calc_date(@detail.where(post_id: post.id)) %>泊<%= calc_date(@detail.where(post_id: post.id)) + 1 %>日&nbsp;&nbsp;
               </span>
               <% end %>

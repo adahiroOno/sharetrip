@@ -310,19 +310,22 @@ body{
  // 極小デバイス（縦向きモバイル, 576px 未満）
  @media (max-width: 575.98px) {
   html { 
-    font-size: 4vw;
+    font-size: 3vw;
 
    }
+   body { 
+    font-size: 3vw;
+  }
   .post_show_total {
     font-size: 4vw;
     font-weight: bold;
   }
   .post_show_title {
-    font-size:   5vw;
+    font-size:   3vw;
     font-weight: bold;
   }
   .flow_trip_title{
-    font-size:  5.5vw;
+    font-size:  3.5vw;
     padding: 0.9vw;
   }
   .main_title {
@@ -362,3 +365,6 @@ body{
  .show_span {
   
  }
+.home_conunt_days {
+  white-space: nowrap;
+}
