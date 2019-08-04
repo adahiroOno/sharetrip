@@ -8,23 +8,37 @@
               <%= link_to(content_tag(:i, 'close', class: 'material-icons delete_img'), plan_path(id: detail.id), :method => :delete) %>
               <%= link_to(content_tag(:i, 'edit', class: 'material-icons edit_img'), plan_path(id: detail.id)) %>
             <% end %>
-              Plan Title 
             </div>
 
-            <div>開始日</div>
-            <% if detail.start_date.present? %>
-              <div><%= detail.start_date.strftime('%Y/%m/%d') %></div>
-            <% else %>
-              <div><%= detail.start_date %></div>
-            <% end %>
+            <!-- <div>開始日</div> -->
+            <span>
+              <% if detail.start_date.present? %>
+                
+                <%= detail.start_date.strftime('%Y/%m/%d') %> ~
+              <% else %>
+                <%= detail.start_date %>
+              <% end %>
+            </span>
 
-            <div>終了日</div>
-            <% if detail.close_date.present? %>
-              <div><%= detail.close_date.strftime('%Y/%m/%d') %></div>
-            <% else %>
-              <div><%= detail.close_date %></div>
-            <% end %>
-            <div><%= detail.plan_title %></div>
+            <!--   <div>終了日</div> -->
+            <span>
+              <% if detail.close_date.present? %>
+                <%= detail.close_date.strftime('%Y/%m/%d') %>
+              <% else %>
+                <%= detail.close_date %>
+              <% end %>
+            </span>
+    
+            <div>
+              <% if detail.start_date.present? %>                
+                <%= detail.start_date.strftime('%H:%M') %> ~
+              <% end %>
+              <% if detail.close_date.present? %>
+                <%= detail.close_date.strftime('%H:%M') %>
+              <% end %>
+            </div>
+
+            <div class=""><%= detail.plan_title %></div>
 
             <div>金額</div>
             <div><%= number_to_currency(detail.cost ||= 0) %></div>
@@ -32,16 +46,21 @@
 
 
             <div>出発地</div>
-            <div><%= detail.start_point %></div>
+            <div>
+              <%= detail.start_point %>
+              <%= detail.goal_point %>
+            </div>
 
             <div>目的地</div>
-            <div><%= detail.goal_point %></div>
-
-            <div>所要時間</div>
-            <% if detail.duration.present? %>
-              <div><%= detail.duration.strftime('%H:%M:%S') %></div>
-            <% else %>
-              <div><%= detail.duration %></div>
+            <div></div>
+            
+            <% if false %>
+              <div>所要時間</div>
+              <% if detail.duration.present? %>
+                <div><%= detail.duration.strftime('%H:%M:%S') %></div>
+              <% else %>
+                <div><%= detail.duration %></div>
+              <% end %>
             <% end %>
 
             <div>Detail</div>

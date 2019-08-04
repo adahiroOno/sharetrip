@@ -47,7 +47,7 @@
      text-decoration: none;
      float: left;
  }
- input[type="text"],input[type="date"] {
+ input[type="text"],input[type="datetime-local"] {
   border: 0;
   // border-bottom: 1px solid #000000;
   border-radius: 0.1em;
@@ -102,9 +102,6 @@ body{
 }
 .post-card-first {
   margin:0 0 0.5vh 0;
-}
-.cost_form {
-  width: 98%;
 }
 #plan_detail_cost{
   clear: right;
