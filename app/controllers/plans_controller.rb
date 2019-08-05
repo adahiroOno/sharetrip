@@ -20,6 +20,7 @@ class PlansController < ApplicationController
   def destroy
     @plan = PlanDetail.find(params[:id])
     @plan.destroy!
+    calc_data(@plan)
     redirect_to edit_post_path(@plan.post_id)
   end
 
