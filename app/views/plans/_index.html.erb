@@ -1,5 +1,5 @@
 <% if @detail.size > 0 %>
-  <%= @detail.find_each do |detail| %>
+  <% @detail.order("start_date desc").each do |detail| %>
     <div class="form-user card">
       <div class="card-body">
         <div class="card-title">
@@ -13,7 +13,7 @@
             <!-- <div>開始日</div> -->
             <div class="test">
               <div class="show_date float-left">
-                <% if detail.start_date.present? %>             
+                <% if detail.start_date.present? %>
                  <div class=""><%= detail.start_date.strftime('%Y/%m/%d') %></div>
                  <div class=""><%= detail.start_date.strftime('%H:%M') %></div>
                 <% else %>
