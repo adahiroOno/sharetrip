@@ -1,5 +1,5 @@
 <% if @detail.size > 0 %>
-  <% @detail.order("start_date desc").each do |detail| %>
+  <% @detail.order("start_date asc").each do |detail| %>
     <div class="form-user card">
       <div class="card-body">
         <div class="card-title">
