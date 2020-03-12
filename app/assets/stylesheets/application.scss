@@ -1,0 +1,370 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+ @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+ @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
+ .header{
+     background:#fff;
+     box-shadow:0 2px 8px rgba(30,30,80,.3);
+     left:0;
+     line-height:1;
+     position:fixed;
+     top:0;
+     width:100%;
+     background-image: linear-gradient(-90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+     height: 50px;
+     z-index:24;
+     font-weight: 700;
+ }
+   .header_img {
+     height: auto;
+     width: 100%;
+     filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+     box-shadow:
+     inset 0 0 20px #fff /* 背景色と同じ色 */,
+     inset 0 0 20px #fff,
+     inset 0 0 20px #fff,
+     inset 0 0 20px #fff;
+   }
+ #home_title{
+     font-size: 2vw;
+     margin: 2px 0 0 3%;
+     font-family: 'Kaushan Script', cursive;    
+     vertical-align: middle;
+     color: rgb(56, 237, 240);
+     text-decoration: none;
+     float: left;
+ }
+ input[type="text"],input[type="datetime-local"] {
+  border: 0;
+  // border-bottom: 1px solid #000000;
+  border-radius: 0.1em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  background: transparent;
+ }
+ .devise-header-btn {
+  margin: 10px 10px 0 0;
+  text-align: center;
+ }
+ .header-btn {
+  margin: 0 1% 0 0;
+ }
+.main_title {
+  font-family: 'Kaushan Script', cursive;
+  margin: 50px 0 10px 0;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+body{
+  // background-image: linear-gradient(-90deg, #1A7B0F, #089CC9);
+  // background-color: #f0f0f0;
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  font-family: 'M PLUS 1p',sans-serif;
+  font-weight: 700;
+}
+.body-content {
+  padding-top: 100px;
+}
+.time_line {
+  overflow:auto;
+}
+.login{
+  text-align: center;
+}
+.devise-text {
+  margin-left: 5%;
+  float: left;
+}
+.devise-text-pass {
+  float: left;
+}
+.devise-text-title {
+  margin-left: 5%;
+  text-align: left;
+  padding: 10px 0 0 0;
+}
+.post-card {
+ margin:0 0 3vh 0;
+}
+.post-card-first {
+  margin:0 0 0.5vh 0;
+}
+.info-control {
+  width: 90%;
+}
+.btn-control {
+  width: 90%;
+  margin: 10px 0;
+}
+.card-width {
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+#error_explanation {
+  background-color: rgba(240, 91, 91, 0.954);
+}
+.card {
+  border: none;
+  margin: 0 0 20px 0;
+  position: relative;
+  min-height: 300px;
+  max-width:1000px;
+  box-shadow: 0 0 20px rgba(0,0,0,.5);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+#title_card {
+  min-height: 150px;
+}
+#home_card {
+  box-shadow: 0 0 12px rgba(0,0,0,.4);
+  margin-top: 10px;
+}
+.sample_photo{
+  object-fit: cover;
+}
+.flow_trip_title{
+  position: relative; 
+  bottom: 0;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(235, 234, 234, 0.228);
+  width: 100%;
+}
+.post_show_card {
+  width: 100%;
+}
+.flow_user_name {
+  padding: 10px 0 10px 5px;
+}
+#card_detail_link {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.add-btn {
+  background: linear-gradient(-45deg, rgba(87, 225, 181, 1) 0%, rgba(0, 63, 255,0.8) 100%);
+  box-shadow: 0 5px 20px rgba(0, 63, 255, .5);
+  border: none;
+}
+.delete_img {
+  text-decoration: none;
+  color:#000; 
+  float: right;
+  top: 0;
+  margin-left: 10px;
+}
+.edit_img  {
+  text-decoration: none;
+  color:#000; 
+  float: right;
+  top: 0;
+}
+.delete_img:hover {
+  background-color:#e8bdbd;
+  border-radius: 10px;
+}
+.edit_img:hover {
+  background-color:#9ee5f2;
+  border-radius: 10px;
+}
+.title_edit_img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.show_title_content {
+  margin-top: 10px;
+}
+#logout_btn {
+  box-shadow: 0 0 20px rgba(0,0,0,.5);
+  text-decoration: none;
+}
+
+
+@media (min-width: 992px) {
+  html { 
+    font-size: 0.85vw;
+  }
+  body { 
+    font-size: 1.5vw;
+  }
+  .post_show_total {
+    font-size: 1.5vw;
+  }
+  .post_show_title {
+    font-size:   2vw;
+  }
+  .post_show_content{
+    font-weight: 500;
+  }
+  .flow_trip_title{
+    font-size:  1.3vw;
+    padding: 0.4vw;
+  }
+  .main_title {
+    font-size:   4vw;
+  }
+  #home_title{
+    font-size: 2.0vw;
+  }
+  .sample_photo{
+    height: 40vh;
+  }
+  .show_date {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+ }
+ // 中デバイス（タブレット, 992px 未満）
+ @media (max-width: 991.98px) {
+  html { font-size: 2vw }
+  body { 
+    font-size: 2vw;
+  }
+  .post_show_total {
+    font-size: 3vw;
+  }
+  .post_show_title {
+    font-size:   4vw;
+    font-weight: bold;
+  }
+  .flow_trip_title{
+    font-size:  4vw;
+    padding: 0.4vw;
+  }
+  .main_title {
+    font-size: 4vw;
+  }
+  #home_title{
+    font-size: 4.3vw;
+  }
+  .card {
+    min-height: 15vw;
+    min-width: 100%;
+  }
+  .sample_photo{
+    height: 60vh;
+  }
+  .show_date {
+    font-size: 3vw;
+  }
+ }
+ // 小デバイス（横向きモバイル, 768px 未満）
+ @media (max-width: 767.98px) {
+  html { font-size: 2.5vw }
+  body { 
+    font-size: 4vw;
+  }
+  .post_show_total {
+    font-size: 7vw;
+  }
+  .post_show_title {
+    font-size:   7vw;
+    font-weight: bold;
+  }
+  .flow_trip_title{
+    font-size:  3vw;
+    padding: 0.4vw;
+  }
+  .main_title {
+    font-size:   5vw;
+  }
+  #home_title{
+    font-size: 5vw;
+  }
+  .card {
+    min-height: 15vw;
+    min-width: 100%;
+  }
+  .sample_photo{
+    height: 60vh;
+  }
+  .show_date {
+    font-size: 3.0vw;
+    font-weight: bold;
+    text-align: center;
+  }
+ }
+ // @include media-breakpoint-up(sm) {
+ // 極小デバイス（縦向きモバイル, 576px 未満）
+ @media (max-width: 575.98px) {
+  html { 
+    font-size: 3vw;
+
+   }
+   body { 
+    font-size: 3vw;
+  }
+  .post_show_total {
+    font-size: 4vw;
+    font-weight: bold;
+  }
+  .post_show_title {
+    font-size:   4vw;
+    font-weight: bold;
+  }
+  .flow_trip_title{
+    font-size:  3.5vw;
+    padding: 0.9vw;
+  }
+  .main_title {
+    font-size: 7vw;
+  }
+  #home_title{
+    font-size: 6.5vw;
+  }
+  .card {
+    min-height: 15vw;
+    min-width: 100%;
+  }
+  .sample_photo{
+    height: 50vh;
+  }
+  .body-content {
+    padding-top: 8vh;
+  }
+  .show_date {
+    font-size: 4vw;
+    font-weight: bold;
+  }
+ }
+#plan_detail_content {
+  height: 300px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  resize: none;
+ }
+ .show_date {
+  vertical-align: middle;
+ }
+ .float_clear_left {
+  clear: left;
+ }
+ .show_span {
+  
+ }
+.home_conunt_days {
+  white-space: nowrap;
+}

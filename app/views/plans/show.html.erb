@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-lg-6 mx-auto">
+    <div class="form-user card">
+      <div class="card-body">
+        <div class="card-title">          
+          <%= form_for @detail, :url => plan_path do |f| %>
+            <div class="row">
+              <div class="col-lg-6">
+                <div><%= f.label :plan_title, "Plan Title" %></div>
+                <div><%= f.text_field :plan_title, class: "form-control post-card" %></div>
+              </div>
+
+              <div class="col-lg-6">
+                <div><%= f.label :cost, "金額" %></div>
+                <div><%= f.text_field :cost, class: "form-control post-card" %></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div><%= f.label :start_date, "開始日" %></div>
+                <div><%= f.datetime_field :start_date, class: "form-control post-card" %></div>
+              </div>
+  
+              <div class="col-lg-6">
+                <div><%= f.label :close_date, "終了日" %></div>
+                <div><%= f.datetime_field :close_date, class: "form-control post-card" %></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div><%= f.label :start_point, "出発地" %></div>
+                <div><%= f.text_field :start_point, class: "form-control post-card" %></div>
+              </div>
+    
+              <div class="col-lg-6">
+                <div><%= f.label :goal_point, "目的地" %></div>
+                <div><%= f.text_field :goal_point, class: "form-control post-card" %></div>
+              </div>
+            </div>
+
+            <% if false %>
+              <div><%= f.label :duration, "所要時間"%></div>
+              <div><%= f.time_field :duration, class: "form-control post-card" %></div>
+             <% end %>
+            <div><%= f.label :content, "Detail" %></div>
+            <div class="detail_content"><%= f.text_area :content,:size=>"60x10", class: "form-control post-card" %></div>
+            <div><%= f.submit "Update", class: "btn btn-primary float-right add-btn" %></div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

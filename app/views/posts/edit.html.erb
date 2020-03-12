@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-lg-6 mx-auto">
+    <% if current_user.id == @post.user_id %>
+      <%= render 'posts/show_trip' %>
+    <% end %>
+    <% if current_user.id == @post.user_id %>
+      <%= render 'posts/new_plan' %>
+    <% end %>
+    <%= render '/plans/index' %>
+  </div>
+</div>
+
+
+<% if false %>
+<div class="col-lg-2 pl-0">
+  <%= link_to "タイムライン", home_index_path, class: 'btn btn-primary float-left' %>
+</div>
+<% end %>

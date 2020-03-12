@@ -1,2 +1,24 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="home_content">
+  <div class="row">
+    <div class="col-lg-6 mx-auto time_line">
+      <% @post.find_each do |post| %>
+        <% unless @detail.where(post_id: post.id).blank? %>
+          <div class="card" id="home_card">
+            <div class="flow_user_name"><%= post.user.name %></div>
+            <%= image_tag("header.jpg", :class => "sample_photo") %>
+            <div class="flow_trip_title">
+              <%= post.trip_title %>
+              <span class="float-right"><%= number_to_currency(post.total_cost ||= 0) %></span>
+              <% if @detail.where(post_id: post.id).select("start_date").present? && @detail.where(post_id: post.id).select("close_date").present? %>
+              <span class="float-right home_conunt_days">
+                <%= calc_date(@detail.where(post_id: post.id)) %>泊<%= calc_date(@detail.where(post_id: post.id)) + 1 %>日&nbsp;&nbsp;
+              </span>
+              <% end %>
+            </div>
+            <%= link_to '', edit_post_path(post), id: 'card_detail_link' %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

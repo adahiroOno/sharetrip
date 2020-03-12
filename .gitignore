@@ -19,9 +19,10 @@
 
 /node_modules
 /yarn-error.log
-
+/vendor/*
 /public/assets
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+vendor/*
