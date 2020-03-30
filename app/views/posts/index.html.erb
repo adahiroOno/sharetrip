@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-lg-6 mx-auto">
-    <%= form_for @post, :url => posts_path do |f| %>
+  <div id="target">
+    <%= form_for @post, remote: true, url: posts_path do |f| %>
       <%= f.hidden_field :user_id, :value => current_user.id %>
       <div class="form-user card">
         <div class="card-body">
@@ -14,6 +15,7 @@
         </div>
       </div>
     <% end %>
+  </div>
   </div>
 </div>
 
