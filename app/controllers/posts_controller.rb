@@ -13,7 +13,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.save!
-    redirect_to edit_post_path(@post)
+    respond_to do |format|
+      format.html 
+      format.js { render :test_create }
+    end
+
   end
 
   def edit
